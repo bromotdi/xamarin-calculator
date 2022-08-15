@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App5.MainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="TextColor" Value="#520052"/>
+                <Setter Property="BackgroundColor" Value="#ffc0cb"/>
+                <Setter Property="FontSize" Value="Small"/>
+                <Setter Property="Margin" Value="3"/>
+            </Style>
+            <Style x:Key="labelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="#520052"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="FontFamily" Value="Arial"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="VerticalOptions" Value="Start"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <StackLayout>
+        <Label Text="Калькулятор"
+            Style="{StaticResource labelStyle}"/>
+        <StackLayout>
+            <Entry x:Name="x1" Keyboard="Numeric" WidthRequest="100" Placeholder="Введіть число">
+            </Entry>
+            <Entry x:Name="x2" Keyboard="Numeric" WidthRequest="100" Placeholder="Введіть число">
+            </Entry>
+            <Entry x:Name="x3" Keyboard="Numeric" WidthRequest="100" Placeholder="Введіть число">
+            </Entry>
+        </StackLayout>
+        <StackLayout Orientation="Vertical">
+            <Button Text="+" Clicked="Button_Clicked" Style="{StaticResource buttonStyle}"/>
+            <Button Text="-" Clicked="Button_Clicked1" Style="{StaticResource buttonStyle}"/>
+            <Button Text="*" Clicked="Button_Clicked2" Style="{StaticResource buttonStyle}"/>
+            <Button Text="/" Clicked="Button_Clicked3" Style="{StaticResource buttonStyle}"/>
+            <Button Text="A^B" Clicked="Button_Clicked4" Style="{StaticResource buttonStyle}"/>
+            <Button Text="Завдання №1" Clicked="Button_Clicked5" Style="{StaticResource buttonStyle}"/>
+            <Button Text="Завдання №2" Clicked="Button_Clicked6" Style="{StaticResource buttonStyle}"/>
+        </StackLayout>
+        <Label Text="Результат розрахунку = " Style="{StaticResource labelStyle}"/>
+        <Label x:Name="result" Style="{StaticResource labelStyle}"/>
+    </StackLayout>
+</ContentPage>
